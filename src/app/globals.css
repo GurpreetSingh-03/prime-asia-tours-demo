@@ -1,0 +1,114 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: var(--font-sans);
+  --font-sans: var(--font-sans);
+
+  /* ExploreX Brand Colors (Matched to Logo) */
+  --color-brand-blue-50: #f0f3fa;
+  --color-brand-blue-100: #e1e7f5;
+  --color-brand-blue-500: #4b5ea5;
+  --color-brand-blue-600: #324589; /* Exact Logo Royal Blue */
+  --color-brand-blue-700: #28376d;
+  --color-brand-blue-800: #1e2952;
+  --color-brand-blue-900: #141b37;
+  --color-brand-gold-500: #f6a90e; /* Exact Logo Gold */
+  --color-brand-dark: #0d1326;      /* Matching Dark Navy Slate */
+  --color-brand-green-500: #10b981; 
+  --color-brand-red-500: #ef4444;   
+  --color-brand-gray-650: #4b5563;
+  --color-brand-gray-200: #e5e7eb;
+
+  /* Custom Animations */
+  --animate-float: float 4s ease-in-out infinite;
+  --animate-slide-up: slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-fade-in: fadeIn 0.8s ease-out forwards;
+  --animate-scale-up: scaleUp 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+  @keyframes slideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes scaleUp {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+  }
+}
+
+/* Base Styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #fafbfe;
+  color: var(--color-brand-dark);
+  font-family: var(--font-sans), sans-serif;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-sans), sans-serif;
+  letter-spacing: -0.02em;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #fafbfe;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-brand-blue-500);
+}
+
+/* Premium utilities */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.5);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, var(--color-brand-blue-700) 0%, var(--color-brand-blue-500) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.button-hover-effect {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.button-hover-effect::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.15);
+  transform: translate(-50%, -50%) scale(0);
+  border-radius: 50%;
+  transition: transform 0.5s ease;
+}
+
+.button-hover-effect:hover::after {
+  transform: translate(-50%, -50%) scale(1);
+}
+
