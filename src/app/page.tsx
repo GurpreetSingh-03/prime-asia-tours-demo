@@ -6,10 +6,11 @@ import WhyTravelWithUs from '@/components/WhyTravelWithUs';
 import TourPackages from '@/components/TourPackages';
 import TravelerReviews from '@/components/TravelerReviews';
 import Footer from '@/components/Footer';
+import WhatsAppButton from '@/components/WhatsAppButton';
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen relative">
       {/* Sticky Header */}
       <Header />
 
@@ -35,6 +36,9 @@ export default function Home() {
 
       {/* Footer Block */}
       <Footer />
+
+      {/* Floating WhatsApp Button */}
+      <WhatsAppButton />
     </div>
   );
 }

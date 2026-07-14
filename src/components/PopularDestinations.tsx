@@ -6,33 +6,33 @@ import { ArrowRight } from 'lucide-react';
 const destinations = [
   {
     id: 1,
-    title: 'Bali, Indonesia',
-    price: '$499',
-    image: 'https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=500&h=750&q=80',
+    title: 'Burj Khalifa',
+    price: '$99',
+    image: '/images/Burj-khalifa.jpg',
   },
   {
     id: 2,
-    title: 'Phuket, Thailand',
-    price: '$599',
-    image: 'https://images.unsplash.com/photo-1589308078059-be1415eab4c3?auto=format&fit=crop&w=500&h=750&q=80',
+    title: 'Palm Jumeirah',
+    price: '$120',
+    image: '/images/Palm-Jumeirah.jpg',
   },
   {
     id: 3,
-    title: 'Cappadocia, Turkey',
-    price: '$699',
-    image: 'https://images.unsplash.com/photo-1507608869274-d3177c8bb4c7?auto=format&fit=crop&w=500&h=750&q=80',
+    title: 'Burj Al Arab',
+    price: '$150',
+    image: '/images/Burj-al-arab.jpg',
   },
   {
     id: 4,
-    title: 'Paris, France',
-    price: '$799',
-    image: 'https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=500&h=750&q=80',
+    title: 'Dubai Marina',
+    price: '$80',
+    image: '/images/Dubai Marina.jpg',
   },
   {
     id: 5,
-    title: 'Maldives',
-    price: '$899',
-    image: 'https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=500&h=750&q=80',
+    title: 'Dubai Mall & Fountain',
+    price: '$49',
+    image: '/images/Dubai Mall & Fountain.jpg',
   },
 ];
 

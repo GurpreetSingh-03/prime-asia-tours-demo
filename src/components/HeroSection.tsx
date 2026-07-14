@@ -46,7 +46,7 @@ export default function HeroSection() {
             {/* Custom Leaf/Capsule Styled Image Container */}
             <div className="relative w-[340px] h-[400px] sm:w-[420px] sm:h-[480px] md:w-[480px] md:h-[540px] overflow-hidden rounded-[180px_180px_40px_180px] border-[12px] border-white shadow-2xl shadow-slate-200">
               <Image
-                src="https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1000&q=80"
+                src="/images/Dubai-main-image.jpg"
                 alt="Santorini, Greece"
                 fill
                 priority
