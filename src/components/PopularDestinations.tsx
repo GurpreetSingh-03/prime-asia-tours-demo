@@ -1,42 +1,47 @@
 'use client';
 
+import { useState } from 'react';
 import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
+import EnquiryModal from './EnquiryModal';
 
 const destinations = [
   {
     id: 1,
     title: 'Burj Khalifa',
-    price: '$99',
     image: '/images/Burj-khalifa.jpg',
   },
   {
     id: 2,
     title: 'Palm Jumeirah',
-    price: '$120',
-    image: '/images/Palm-Jumeirah.jpg',
+    image: '/images/Palm Jumeirah.jpg',
   },
   {
     id: 3,
     title: 'Burj Al Arab',
-    price: '$150',
     image: '/images/Burj-al-arab.jpg',
   },
   {
     id: 4,
     title: 'Dubai Marina',
-    price: '$80',
     image: '/images/Dubai Marina.jpg',
   },
   {
     id: 5,
     title: 'Dubai Mall & Fountain',
-    price: '$49',
     image: '/images/Dubai Mall & Fountain.jpg',
   },
 ];
 
 export default function PopularDestinations() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedDest, setSelectedDest] = useState('');
+
+  const handleEnquiryOpen = (title: string) => {
+    setSelectedDest(title);
+    setIsModalOpen(true);
+  };
+
   return (
     <section id="destinations" className="py-20 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -75,18 +80,26 @@ export default function PopularDestinations() {
               />
 
               {/* Dark Overlay Gradient */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-black/5 group-hover:via-black/45 transition-all duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-black/5 group-hover:via-black/45 transition-all duration-500" />
 
               {/* Content Overlay */}
-              <div className="absolute bottom-0 left-0 right-0 p-5 z-10 flex flex-col justify-end transform translate-y-1 group-hover:translate-y-0 transition-transform duration-350">
+              <div className="absolute bottom-0 left-0 right-0 p-5 z-10 flex flex-col items-start justify-end transform translate-y-1 group-hover:translate-y-0 transition-transform duration-350">
                 {/* Title */}
-                <h3 className="text-base md:text-lg font-bold text-white leading-tight">
+                <h3 className="text-sm md:text-base font-bold text-white leading-tight">
                   {dest.title}
                 </h3>
-                {/* Price */}
-                <div className="text-xs md:text-sm text-slate-200 mt-1.5 font-semibold">
-                  From <span className="text-white font-extrabold">{dest.price}</span>
-                </div>
+                
+                {/* Enquiry Button */}
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    handleEnquiryOpen(dest.title);
+                  }}
+                  className="mt-3 inline-flex items-center gap-1 text-[11px] md:text-xs font-extrabold uppercase tracking-wider text-brand-gold-500 hover:text-white transition-colors cursor-pointer group/btn"
+                >
+                  <span>Inquire Now</span>
+                  <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover/btn:translate-x-1" />
+                </button>
               </div>
 
             </div>
@@ -105,6 +118,13 @@ export default function PopularDestinations() {
         </div>
 
       </div>
+
+      {/* Enquiry Modal Pop-up */}
+      <EnquiryModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        destination={selectedDest}
+      />
     </section>
   );
 }
