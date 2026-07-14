@@ -14,7 +14,7 @@ const destinations = [
   {
     id: 2,
     title: 'Palm Jumeirah',
-    image: '/images/Palm Jumeirah.jpg',
+    image: '/images/Palm-Jumeirah.jpg',
   },
   {
     id: 3,
