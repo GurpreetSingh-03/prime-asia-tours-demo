@@ -148,7 +148,7 @@ export default function HeroSection() {
               type="submit"
               className="lg:ml-4 px-8 py-4 bg-brand-blue-600 hover:bg-brand-blue-700 text-white font-bold rounded-2xl lg:rounded-full transition-all duration-300 flex items-center justify-center gap-2 hover:shadow-lg hover:shadow-brand-blue-600/20"
             >
-              <span>Search Tours</span>
+              <span>Send Enquiry</span>
               <ArrowRight className="w-4 h-4" />
             </button>
 

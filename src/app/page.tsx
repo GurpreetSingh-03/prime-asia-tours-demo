@@ -1,3 +1,4 @@
+import HeroCarousel from '@/components/HeroCarousel';
 import Header from '@/components/Header';
 import HeroSection from '@/components/HeroSection';
 import TrustBadges from '@/components/TrustBadges';
@@ -11,6 +12,9 @@ import WhatsAppButton from '@/components/WhatsAppButton';
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen relative">
+      {/* Full-screen Image Carousel */}
+      <HeroCarousel />
+
       {/* Sticky Header */}
       <Header />
 

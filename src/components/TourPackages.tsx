@@ -38,11 +38,11 @@ const toursList = [
 
 export default function TourPackages() {
   return (
-    <section id="tours" className="py-20 bg-white overflow-hidden">
+    <section id="tours" className="py-16 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <div className="max-w-xl text-left">
             <span className="text-xs md:text-sm font-extrabold tracking-[0.2em] text-brand-blue-600 uppercase mb-3 block">
               Best Tour Packages
@@ -63,7 +63,7 @@ export default function TourPackages() {
         </div>
 
         {/* 6-Card Custom Grid Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-24 pb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-20 pb-8">
           {toursList.map((tour) => (
             <div
               key={tour.id}
@@ -81,11 +81,11 @@ export default function TourPackages() {
               </div>
 
               {/* Overlapping White Circle */}
-              <div className="absolute left-1/2 bottom-[-48px] -translate-x-1/2 w-[160px] h-[160px] md:w-[170px] md:h-[170px] rounded-full bg-white shadow-lg flex flex-col items-center justify-center p-4 text-center border border-slate-50/50 group-hover:shadow-xl transition-shadow duration-300 z-10">
-                <h3 className="font-sans text-sm md:text-base font-bold text-brand-blue-600 leading-snug">
+              <div className="absolute left-0 bottom-[-40px] w-[130px] h-[130px] md:w-[140px] md:h-[140px] rounded-full bg-white shadow-lg flex flex-col items-center justify-center p-3 text-center border border-slate-50/50 group-hover:shadow-xl transition-shadow duration-300 z-10">
+                <h3 className="font-sans text-xs md:text-sm font-bold text-brand-blue-600 leading-snug">
                   {tour.title}
                 </h3>
-                <span className="w-8 h-[1.5px] bg-brand-dark mt-2.5 opacity-80" />
+                <span className="w-6 h-[1.5px] bg-brand-dark mt-2 opacity-80" />
               </div>
             </div>
           ))}

@@ -94,7 +94,7 @@ export default function Footer() {
               Top Destinations
             </h4>
             <ul className="flex flex-col gap-3 text-xs md:text-sm font-semibold text-slate-500">
-              <li><a href="#destinations" className="hover:text-brand-blue-600 transition-colors">Bali, Indonesia</a></li>
+              <li><a href="#destinations" className="hover:text-brand-blue-600 transition-colors">Dubai</a></li>
               <li><a href="#destinations" className="hover:text-brand-blue-600 transition-colors">Thailand</a></li>
               <li><a href="#destinations" className="hover:text-brand-blue-600 transition-colors">Maldives</a></li>
               <li><a href="#destinations" className="hover:text-brand-blue-600 transition-colors">Paris, France</a></li>
