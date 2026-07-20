@@ -42,79 +42,81 @@ export default function Header() {
   ];
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 transform ${
-        isScrolled
-          ? 'translate-y-0 glass-effect shadow-sm py-1.5 md:py-3'
-          : 'translate-y-0 md:-translate-y-full bg-white/95 md:bg-transparent py-1.5 md:py-3'
-      }`}
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-10 md:h-14">
-          {/* Logo */}
-          <a href="#home" onClick={() => setActiveLink('Home')}>
-            <Logo />
-          </a>
-
-          {/* Desktop Nav Links */}
-          <nav className="hidden md:flex items-center gap-6">
-            {navLinks.map((link) => {
-              const isActive = activeLink === link.name;
-              return (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  onClick={() => setActiveLink(link.name)}
-                  className={`font-sans text-[13px] font-medium transition-colors duration-200 relative py-1.5 ${
-                    isActive
-                      ? `${isScrolled ? 'text-brand-blue-600' : 'text-white'} font-semibold`
-                      : `${isScrolled ? 'text-slate-650 hover:text-brand-blue-600' : 'text-white/85 hover:text-white'}`
-                  }`}
-                >
-                  {link.name}
-                  {isActive && (
-                    <span className={`absolute bottom-0 left-1/4 right-1/4 h-[3px] rounded-full ${isScrolled ? 'bg-brand-blue-600' : 'bg-white'}`} />
-                  )}
-                </a>
-              );
-            })}
-          </nav>
-
-          {/* Desktop Right Actions */}
-          <div className="hidden md:flex items-center gap-4">
-            <a
-              href="tel:+12345678900"
-              className={`flex items-center gap-1.5 transition-colors text-xs font-semibold ${
-                isScrolled ? 'text-slate-700 hover:text-brand-blue-600' : 'text-white/85 hover:text-white'
-              }`}
-            >
-              <Phone className={`w-3.5 h-3.5 ${isScrolled ? 'text-brand-blue-600' : 'text-white'}`} />
-              <span>+1 234 567 8900</span>
+    <>
+      <header
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 transform ${
+          isScrolled
+            ? 'translate-y-0 glass-effect shadow-sm py-1.5 md:py-3'
+            : 'translate-y-0 md:-translate-y-full bg-white/95 md:bg-transparent py-1.5 md:py-3'
+        }`}
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-10 md:h-14">
+            {/* Logo */}
+            <a href="#home" onClick={() => setActiveLink('Home')}>
+              <Logo />
             </a>
+
+            {/* Desktop Nav Links */}
+            <nav className="hidden md:flex items-center gap-6">
+              {navLinks.map((link) => {
+                const isActive = activeLink === link.name;
+                return (
+                  <a
+                    key={link.name}
+                    href={link.href}
+                    onClick={() => setActiveLink(link.name)}
+                    className={`font-sans text-[13px] font-medium transition-colors duration-200 relative py-1.5 ${
+                      isActive
+                        ? `${isScrolled ? 'text-brand-blue-600' : 'text-white'} font-semibold`
+                        : `${isScrolled ? 'text-slate-650 hover:text-brand-blue-600' : 'text-white/85 hover:text-white'}`
+                    }`}
+                  >
+                    {link.name}
+                    {isActive && (
+                      <span className={`absolute bottom-0 left-1/4 right-1/4 h-[3px] rounded-full ${isScrolled ? 'bg-brand-blue-600' : 'bg-white'}`} />
+                    )}
+                  </a>
+                );
+              })}
+            </nav>
+
+            {/* Desktop Right Actions */}
+            <div className="hidden md:flex items-center gap-4">
+              <a
+                href="tel:+12345678900"
+                className={`flex items-center gap-1.5 transition-colors text-xs font-semibold ${
+                  isScrolled ? 'text-slate-700 hover:text-brand-blue-600' : 'text-white/85 hover:text-white'
+                }`}
+              >
+                <Phone className={`w-3.5 h-3.5 ${isScrolled ? 'text-brand-blue-600' : 'text-white'}`} />
+                <span>+1 234 567 8900</span>
+              </a>
+              <button
+                aria-label="Profile"
+                className={`w-8 h-8 rounded-full border flex items-center justify-center transition-all duration-200 hover:scale-105 ${
+                  isScrolled
+                    ? 'border-slate-200 hover:border-brand-blue-600 hover:text-brand-blue-600 text-slate-650'
+                    : 'border-white/30 hover:border-white hover:text-white text-white/85'
+                }`}
+              >
+                <User className="w-4 h-4" />
+              </button>
+            </div>
+
+            {/* Mobile Menu Toggle Button */}
             <button
-              aria-label="Profile"
-              className={`w-8 h-8 rounded-full border flex items-center justify-center transition-all duration-200 hover:scale-105 ${
-                isScrolled
-                  ? 'border-slate-200 hover:border-brand-blue-600 hover:text-brand-blue-600 text-slate-650'
-                  : 'border-white/30 hover:border-white hover:text-white text-white/85'
-              }`}
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="md:hidden p-1.5 focus:outline-none text-slate-700 hover:text-slate-900"
+              aria-label="Toggle menu"
             >
-              <User className="w-4 h-4" />
+              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
-
-          {/* Mobile Menu Toggle Button */}
-          <button
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className={`md:hidden p-1.5 focus:outline-none ${isScrolled ? 'text-slate-700' : 'text-white'}`}
-            aria-label="Toggle menu"
-          >
-            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
         </div>
-      </div>
+      </header>
 
-      {/* Mobile Drawer Navigation */}
+      {/* Mobile Drawer Navigation (Placed outside of header to prevent fixed position coordinate conflicts) */}
       <div
         className={`fixed inset-0 top-[52px] z-40 md:hidden bg-white transition-transform duration-300 ease-in-out ${
           mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
@@ -162,6 +164,6 @@ export default function Header() {
           </div>
         </div>
       </div>
-    </header>
+    </>
   );
 }
