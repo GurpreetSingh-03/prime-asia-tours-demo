@@ -43,10 +43,10 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 transform ${
         isScrolled
-          ? 'glass-effect shadow-sm py-3'
-          : 'bg-white/95 md:bg-transparent py-3'
+          ? 'translate-y-0 glass-effect shadow-sm py-3'
+          : '-translate-y-full bg-white/95 md:bg-transparent py-3'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

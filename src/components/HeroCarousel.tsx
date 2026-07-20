@@ -52,7 +52,7 @@ export default function HeroCarousel() {
           <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 w-full pt-12 md:pt-0">
             <div className="max-w-xl text-left">
               
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-[1.1] tracking-tight">
+              <h1 className="text-[28px] sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-[1.1] tracking-tight">
                 Your Journey <br />
                 Starts Here
               </h1>
@@ -60,7 +60,7 @@ export default function HeroCarousel() {
               {/* Gold Accent Bar */}
               <div className="w-14 h-1.5 bg-brand-gold-500 rounded-full my-4" />
 
-              <p className="text-sm md:text-base text-white/90 font-medium leading-relaxed mb-6 md:mb-8">
+              <p className="text-[11px] sm:text-sm md:text-base text-white/90 font-medium leading-relaxed mb-6 md:mb-8">
                 Explore. Experience. Enjoy Dubai
               </p>
 
@@ -150,12 +150,12 @@ export default function HeroCarousel() {
         <MapPin className="w-6 h-6 text-brand-gold-500 mb-2" />
         
         {/* Title */}
-        <h2 className="text-white text-base font-extrabold tracking-wide">
+        <h2 className="text-white text-sm sm:text-base font-extrabold tracking-wide">
           Discover Amazing Places
         </h2>
         
         {/* Subtitle */}
-        <p className="text-slate-400 text-xs mt-1 font-semibold">
+        <p className="text-slate-400 text-[10px] sm:text-xs mt-1 font-semibold">
           Handpicked destinations for unforgettable memories.
         </p>
 
