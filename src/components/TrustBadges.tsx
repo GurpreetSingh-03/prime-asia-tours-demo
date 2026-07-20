@@ -1,6 +1,6 @@
 'use client';
 
-import { ShieldCheck, CalendarRange, Headset } from 'lucide-react';
+import { ShieldCheck, CalendarRange, Compass } from 'lucide-react';
 
 const badges = [
   {
@@ -23,9 +23,9 @@ const badges = [
   },
   {
     id: 4,
-    icon: Headset,
-    title: '24/7 Support',
-    description: 'We are here for you',
+    icon: Compass,
+    title: 'Local Experts',
+    description: 'Deep local knowledge',
   },
 ];
 

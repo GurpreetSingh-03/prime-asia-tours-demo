@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
-import { ArrowRight, Globe, Briefcase, Headphones, MapPin } from 'lucide-react';
+import { ArrowRight, Globe, Briefcase, Compass, MapPin } from 'lucide-react';
 
 const slides = [
   { id: 1, src: '/images/home-crousel-1.jpg' },
@@ -95,8 +95,8 @@ export default function HeroCarousel() {
           </div>
           <div className="w-px h-6 bg-slate-200" />
           <div className="flex items-center gap-2">
-            <Headphones className="w-5 h-5 text-brand-gold-500" />
-            <span className="text-xs font-bold text-slate-700">24/7 Support</span>
+            <Compass className="w-5 h-5 text-brand-gold-500" />
+            <span className="text-xs font-bold text-slate-700">Local Experts</span>
           </div>
         </div>
 
@@ -130,8 +130,8 @@ export default function HeroCarousel() {
             <span className="text-[9px] font-extrabold text-slate-700 leading-tight text-left">Carefully <br /> Planned Tours</span>
           </div>
           <div className="flex items-center justify-center gap-1.5 px-1">
-            <Headphones className="w-4 h-4 text-brand-gold-500 shrink-0" />
-            <span className="text-[9px] font-extrabold text-slate-700 leading-tight text-left">24/7 <br /> Support</span>
+            <Compass className="w-4 h-4 text-brand-gold-500 shrink-0" />
+            <span className="text-[9px] font-extrabold text-slate-700 leading-tight text-left">Local <br /> Experts</span>
           </div>
         </div>
 
