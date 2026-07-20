@@ -12,7 +12,7 @@ export function Logo() {
         alt="ExploreX"
         width={140}
         height={38}
-        className="h-7 w-auto object-contain"
+        className="h-6 md:h-7 w-auto object-contain"
         priority
       />
     </div>
@@ -45,12 +45,12 @@ export default function Header() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 transform ${
         isScrolled
-          ? 'translate-y-0 glass-effect shadow-sm py-3'
-          : '-translate-y-full bg-white/95 md:bg-transparent py-3'
+          ? 'translate-y-0 glass-effect shadow-sm py-1.5 md:py-3'
+          : 'translate-y-0 md:-translate-y-full bg-white/95 md:bg-transparent py-1.5 md:py-3'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-14">
+        <div className="flex items-center justify-between h-10 md:h-14">
           {/* Logo */}
           <a href="#home" onClick={() => setActiveLink('Home')}>
             <Logo />
@@ -106,7 +106,7 @@ export default function Header() {
           {/* Mobile Menu Toggle Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className={`md:hidden p-2 focus:outline-none ${isScrolled ? 'text-slate-700' : 'text-white'}`}
+            className={`md:hidden p-1.5 focus:outline-none ${isScrolled ? 'text-slate-700' : 'text-white'}`}
             aria-label="Toggle menu"
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -116,7 +116,7 @@ export default function Header() {
 
       {/* Mobile Drawer Navigation */}
       <div
-        className={`fixed inset-0 top-[80px] z-40 md:hidden bg-white transition-transform duration-300 ease-in-out ${
+        className={`fixed inset-0 top-[52px] z-40 md:hidden bg-white transition-transform duration-300 ease-in-out ${
           mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
