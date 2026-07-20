@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
-import { ArrowRight, Globe, Briefcase, Headphones, MapPin, Play } from 'lucide-react';
+import { ArrowRight, Globe, Briefcase, Headphones, MapPin } from 'lucide-react';
 
 const slides = [
   { id: 1, src: '/images/home-crousel-1.jpg' },
@@ -75,17 +75,6 @@ export default function HeroCarousel() {
                   <span>Explore Tours</span>
                   <ArrowRight className="w-4 h-4" />
                 </a>
-
-                {/* Watch Video Button */}
-                <button
-                  onClick={() => alert('Watch video player coming soon!')}
-                  className="inline-flex items-center gap-2 text-white hover:text-brand-gold-500 text-xs md:text-sm font-bold transition-colors cursor-pointer"
-                >
-                  <span className="w-7 h-7 md:w-8 md:h-8 rounded-full border border-white flex items-center justify-center group-hover:border-brand-gold-500">
-                    <Play className="w-3.5 h-3.5 fill-current ml-0.5" />
-                  </span>
-                  <span>Watch Video</span>
-                </button>
 
               </div>
 
