@@ -5,11 +5,12 @@ import Image from 'next/image';
 import { ArrowRight, Globe, Briefcase, Compass, MapPin } from 'lucide-react';
 
 const slides = [
-  { id: 1, type: 'image', src: '/images/home-crousel-1.jpg' },
-  { id: 2, type: 'image', src: '/images/home-crousel-2.jpg' },
-  { id: 3, type: 'image', src: '/images/home-crousel-3.jpg' },
-  { id: 4, type: 'image', src: '/images/home-crousel-4.jpg' },
-  { id: 5, type: 'video', src: '/images/video.mp4' },
+  { id: 1, type: 'video', src: '/images/video.mp4' },
+  { id: 2, type: 'image', src: '/images/home-crousel-1.jpg' },
+  { id: 3, type: 'image', src: '/images/home-crousel-2.jpg' },
+  { id: 4, type: 'image', src: '/images/home-crousel-3.jpg' },
+  { id: 5, type: 'image', src: '/images/home-crousel-4.jpg' },
+  
 ];
 
 export default function HeroCarousel() {
@@ -32,7 +33,7 @@ export default function HeroCarousel() {
   // Video play/pause side effect
   useEffect(() => {
     if (slides[current].type === 'video' && videoRef.current) {
-      videoRef.current.currentTime = 0;
+      videoRef.current.currentTime = 1.0; // Start at 1.0s to skip camera shake
       videoRef.current.play().catch((err) => {
         console.log('Autoplay blocked or interrupted:', err);
       });
@@ -61,7 +62,7 @@ export default function HeroCarousel() {
                 muted
                 playsInline
                 autoPlay
-                onEnded={() => setCurrent(0)}
+                onEnded={() => setCurrent((prev) => (prev + 1) % slides.length)}
                 className="w-full h-full object-cover select-none"
               />
             ) : (
