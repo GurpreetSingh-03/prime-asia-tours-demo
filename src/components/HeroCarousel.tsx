@@ -1,30 +1,50 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import { ArrowRight, Globe, Briefcase, Compass, MapPin } from 'lucide-react';
 
 const slides = [
-  { id: 1, src: '/images/home-crousel-1.jpg' },
-  { id: 2, src: '/images/home-crousel-2.jpg' },
-  { id: 3, src: '/images/home-crousel-3.jpg' },
-  { id: 4, src: '/images/home-crousel-4.jpg' },
+  { id: 1, type: 'image', src: '/images/home-crousel-1.jpg' },
+  { id: 2, type: 'image', src: '/images/home-crousel-2.jpg' },
+  { id: 3, type: 'image', src: '/images/home-crousel-3.jpg' },
+  { id: 4, type: 'image', src: '/images/home-crousel-4.jpg' },
+  { id: 5, type: 'video', src: '/images/video.mp4' },
 ];
 
 export default function HeroCarousel() {
   const [current, setCurrent] = useState(0);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
+  // Auto-slide effect for images only
   useEffect(() => {
+    if (slides[current].type === 'video') {
+      return; // Do not auto-slide while video is playing
+    }
+
     const timer = setInterval(() => {
       setCurrent((prev) => (prev + 1) % slides.length);
     }, 5000);
+
     return () => clearInterval(timer);
-  }, []);
+  }, [current]);
+
+  // Video play/pause side effect
+  useEffect(() => {
+    if (slides[current].type === 'video' && videoRef.current) {
+      videoRef.current.currentTime = 0;
+      videoRef.current.play().catch((err) => {
+        console.log('Autoplay blocked or interrupted:', err);
+      });
+    } else if (slides[current].type !== 'video' && videoRef.current) {
+      videoRef.current.pause();
+    }
+  }, [current]);
 
   return (
     <div className="relative w-full bg-[#0d1326] flex flex-col md:block">
       
-      {/* 1. Image Carousel & Overlay Area */}
+      {/* 1. Image & Video Carousel / Overlay Area */}
       <section className="relative w-full h-[62vh] min-h-[440px] md:h-screen overflow-hidden z-10">
         
         {/* Slides loop */}
@@ -34,13 +54,25 @@ export default function HeroCarousel() {
             className="absolute inset-0 transition-opacity duration-1000 ease-in-out"
             style={{ opacity: index === current ? 1 : 0 }}
           >
-            <Image
-              src={slide.src}
-              alt={`Slide ${index + 1}`}
-              fill
-              priority={index === 0}
-              className="object-cover object-center select-none"
-            />
+            {slide.type === 'video' ? (
+              <video
+                ref={videoRef}
+                src={slide.src}
+                muted
+                playsInline
+                autoPlay
+                onEnded={() => setCurrent(0)}
+                className="w-full h-full object-cover select-none"
+              />
+            ) : (
+              <Image
+                src={slide.src}
+                alt={`Slide ${index + 1}`}
+                fill
+                priority={index === 0}
+                className="object-cover object-center select-none"
+              />
+            )}
           </div>
         ))}
 
