@@ -25,7 +25,7 @@ export const destinationsData: Record<string, Destination> = {
     slug: "switzerland",
     title: "Switzerland",
     subtitle: "Experience the Majestic Alps and Alpine Meadows",
-    image: "https://images.unsplash.com/photo-1502784444187-359ac186c5bb?auto=format&fit=crop&w=1920&q=90",
+    image: "/images/destinations/switzerland/cover.jpg",
     capital: "Bern",
     language: "German, French, Italian, Romansh",
     currency: "Swiss Franc (CHF)",
@@ -50,16 +50,16 @@ export const destinationsData: Record<string, Destination> = {
     },
     keywords: ["alps", "matterhorn", "glacier express", "geneva", "lucerne", "zurich", "swiss", "bern", "mountains"],
     gallery: [
-      "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1920&q=90",
-      "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=1920&q=90",
-      "https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?auto=format&fit=crop&w=1920&q=90"
+      "/images/destinations/switzerland/gallery-1.jpg",
+      "/images/destinations/switzerland/gallery-2.jpg",
+      "/images/destinations/switzerland/gallery-3.jpg"
     ]
   },
   paris: {
     slug: "paris",
     title: "Beauty of Paris",
     subtitle: "Immerse Yourself in Art, Fashion, and Gastronomy",
-    image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1920&q=90",
+    image: "/images/destinations/paris/cover.jpg",
     capital: "Paris (France)",
     language: "French",
     currency: "Euro (EUR)",
@@ -84,16 +84,16 @@ export const destinationsData: Record<string, Destination> = {
     },
     keywords: ["eiffel tower", "louvre", "seine", "montmartre", "marais", "france", "beauty of paris", "french", "notre-dame"],
     gallery: [
-      "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&fit=crop&w=1920&q=90",
-      "https://images.unsplash.com/photo-1503917988258-f87a78e3c995?auto=format&fit=crop&w=1920&q=90",
-      "https://images.unsplash.com/photo-1431274172761-fca41d930114?auto=format&fit=crop&w=1920&q=90"
+      "/images/destinations/paris/gallery-1.jpg",
+      "/images/destinations/paris/gallery-2.jpg",
+      "/images/destinations/paris/gallery-3.jpg"
     ]
   },
   "united-states": {
     slug: "united-states",
     title: "United States",
     subtitle: "Explore Vast Landscapes, National Parks, and Iconic Cities",
-    image: "https://images.unsplash.com/photo-1506012787146-f92b2d7d6d96?auto=format&fit=crop&w=1920&q=90",
+    image: "/images/destinations/united-states/cover.jpg",
     capital: "Washington, D.C.",
     language: "English (De facto)",
     currency: "US Dollar (USD)",
@@ -117,16 +117,16 @@ export const destinationsData: Record<string, Destination> = {
     },
     keywords: ["new york", "manhattan", "grand canyon", "yellowstone", "yosemite", "usa", "america", "united states", "washington"],
     gallery: [
-      "https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?auto=format&fit=crop&w=1920&q=90",
-      "https://images.unsplash.com/photo-1615551043360-33de8b5f410c?auto=format&fit=crop&w=1920&q=90",
-      "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1920&q=90"
+      "/images/destinations/united-states/gallery-1.jpg",
+      "/images/destinations/united-states/gallery-2.jpg",
+      "/images/destinations/united-states/gallery-3.jpg"
     ]
   },
   wiesbaden: {
     slug: "wiesbaden",
     title: "Wiesbaden",
     subtitle: "Discover Historic Thermal Springs and the Rhine Valley",
-    image: "https://images.unsplash.com/photo-1595844730298-b959547909fe?auto=format&fit=crop&w=1920&q=90",
+    image: "/images/destinations/wiesbaden/cover.jpg",
     capital: "Wiesbaden (Capital of Hesse, Germany)",
     language: "German",
     currency: "Euro (EUR)",
@@ -151,16 +151,16 @@ export const destinationsData: Record<string, Destination> = {
     },
     keywords: ["rhine", "kurhaus", "opelbad", "neroberg", "hesse", "germany", "spa town", "hot springs", "castles"],
     gallery: [
-      "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=1920&q=90",
-      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1920&q=90",
-      "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&w=1920&q=90"
+      "/images/destinations/wiesbaden/gallery-1.jpg",
+      "/images/destinations/wiesbaden/gallery-2.jpg",
+      "/images/destinations/wiesbaden/gallery-3.jpg"
     ]
   },
   dubai: {
     slug: "dubai",
     title: "Dubai",
     subtitle: "Where Modern Marvels Meet Arabian Desert Heritage",
-    image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1920&q=90",
+    image: "/images/destinations/dubai/cover.jpg",
     capital: "Dubai (United Arab Emirates)",
     language: "Arabic (Official), English widely spoken",
     currency: "UAE Dirham (AED)",
@@ -187,16 +187,16 @@ export const destinationsData: Record<string, Destination> = {
       "sheikh zayed grand mosque", "abu dhabi", "uae", "emirates", "skyscrapers"
     ],
     gallery: [
-      "https://images.unsplash.com/photo-1518684079-3c830dcef090?auto=format&fit=crop&w=1920&q=90",
-      "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1920&q=90",
-      "https://images.unsplash.com/photo-1528702748617-c64d49f918af?auto=format&fit=crop&w=1920&q=90"
+      "/images/destinations/dubai/gallery-1.jpg",
+      "/images/destinations/dubai/gallery-2.jpg",
+      "/images/destinations/dubai/gallery-3.jpg"
     ]
   },
   georgia: {
     slug: "georgia",
     title: "Georgia",
     subtitle: "Journey Through High Caucasus Peaks and Ancient Towns",
-    image: "https://images.unsplash.com/photo-1565008447742-97f6f38c985c?auto=format&fit=crop&w=1920&q=90",
+    image: "/images/destinations/georgia/cover.jpg",
     capital: "Tbilisi",
     language: "Georgian",
     currency: "Georgian Lari (GEL)",
@@ -220,16 +220,16 @@ export const destinationsData: Record<string, Destination> = {
     },
     keywords: ["tbilisi", "gergeti", "kazbek", "kakheti", "signagi", "caucasus", "monasteries", "old town"],
     gallery: [
-      "https://images.unsplash.com/photo-1543731068-7e0f5beff43a?auto=format&fit=crop&w=1920&q=90",
-      "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1920&q=90",
-      "https://images.unsplash.com/photo-1561542320-9a18cd340469?auto=format&fit=crop&w=1920&q=90"
+      "/images/destinations/georgia/gallery-1.jpg",
+      "/images/destinations/georgia/gallery-2.jpg",
+      "/images/destinations/georgia/gallery-3.jpg"
     ]
   },
   morocco: {
     slug: "morocco",
     title: "Morocco",
     subtitle: "Discover Vibrant Medinas, Spices, and Sahara Dunes",
-    image: "https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?auto=format&fit=crop&w=1920&q=90",
+    image: "/images/destinations/morocco/cover.jpg",
     capital: "Rabat",
     language: "Arabic, Berber (Official), French widely used",
     currency: "Moroccan Dirham (MAD)",
@@ -254,9 +254,9 @@ export const destinationsData: Record<string, Destination> = {
     },
     keywords: ["marrakesh", "sahara", "chefchaouen", "fes", "atlas", "rabat", "medina", "spices", "desert"],
     gallery: [
-      "https://images.unsplash.com/photo-1539650116574-8efeb43e2750?auto=format&fit=crop&w=1920&q=90",
-      "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1920&q=90",
-      "https://images.unsplash.com/photo-1507608869274-d3177c8bb4c7?auto=format&fit=crop&w=1920&q=90"
+      "/images/destinations/morocco/gallery-1.jpg",
+      "/images/destinations/morocco/gallery-2.jpg",
+      "/images/destinations/morocco/gallery-3.jpg"
     ]
   }
 };
