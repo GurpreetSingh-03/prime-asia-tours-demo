@@ -40,7 +40,22 @@ export default function EnquiryModal({ isOpen, onClose, destination }: EnquiryMo
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    // Simulate API Submission
+
+    const messageText = `Hello Prime Asia Tours, I would like to request a custom travel quote.
+
+Here are my details:
+📍 Destination of Interest: ${destination}
+👤 Name: ${formData.fullName}
+📧 Email: ${formData.email}
+📱 Phone: ${formData.phone}
+📅 Proposed Travel Date: ${formData.travelDate}
+💬 Message/Requests: ${formData.message || 'None'}`;
+
+    const whatsappUrl = `https://wa.me/971558597360?text=${encodeURIComponent(messageText)}`;
+    
+    // Open WhatsApp pre-filled chat in a new tab
+    window.open(whatsappUrl, '_blank');
+
     setTimeout(() => {
       setIsSubmitting(false);
       setSubmitted(true);
@@ -51,7 +66,7 @@ export default function EnquiryModal({ isOpen, onClose, destination }: EnquiryMo
         travelDate: '',
         message: '',
       });
-    }, 1200);
+    }, 800);
   };
 
   if (!isOpen) return null;

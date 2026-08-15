@@ -6,6 +6,8 @@ import PopularDestinations from '@/components/PopularDestinations';
 import WhyTravelWithUs from '@/components/WhyTravelWithUs';
 import TourPackages from '@/components/TourPackages';
 import TravelerReviews from '@/components/TravelerReviews';
+import OfficeLocation from '@/components/OfficeLocation';
+import FAQ from '@/components/FAQ';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
 
@@ -36,6 +38,12 @@ export default function Home() {
 
         {/* Traveler Reviews & Testimonials */}
         <TravelerReviews />
+
+        {/* FAQ Section */}
+        <FAQ />
+
+        {/* Office Location Map */}
+        <OfficeLocation />
       </main>
 
       {/* Footer Block */}

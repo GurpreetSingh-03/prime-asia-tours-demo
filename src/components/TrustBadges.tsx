@@ -6,8 +6,8 @@ const badges = [
   {
     id: 1,
     icon: ShieldCheck,
-    title: 'Best Price Guarantee',
-    description: 'Get the best prices',
+    title: 'Best Value Deals',
+    description: 'Competitive, fair prices',
   },
   {
     id: 2,
