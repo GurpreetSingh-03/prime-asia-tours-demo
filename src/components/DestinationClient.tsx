@@ -31,6 +31,8 @@ interface DestinationClientProps {
   destination: Destination;
 }
 
+const getAssetUrl = (url: string) => (url.startsWith('/staging') || url.startsWith('http') ? url : `/staging${url}`);
+
 export default function DestinationClient({ destination }: DestinationClientProps) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [lightboxImage, setLightboxImage] = useState<string | null>(null);
@@ -327,7 +329,7 @@ export default function DestinationClient({ destination }: DestinationClientProp
             onClick={(e) => e.stopPropagation()}
           >
             <img
-              src={lightboxImage}
+              src={getAssetUrl(lightboxImage)}
               alt="Enlarged Landscape Gallery View"
               className="max-w-full max-h-full object-contain rounded-xl shadow-2xl border border-white/10 select-none animate-scale-up"
             />

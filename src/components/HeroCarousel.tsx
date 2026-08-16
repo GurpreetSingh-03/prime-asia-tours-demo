@@ -4,13 +4,14 @@ import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import { ArrowRight, Globe, Briefcase, Compass, MapPin } from 'lucide-react';
 
+const getAssetUrl = (url: string) => (url.startsWith('/staging') || url.startsWith('http') ? url : `/staging${url}`);
+
 const slides = [
   { id: 1, type: 'video', src: '/images/video.mp4' },
   { id: 2, type: 'image', src: '/images/home-crousel-1.jpg' },
   { id: 3, type: 'image', src: '/images/home-crousel-2.jpg' },
   { id: 4, type: 'image', src: '/images/home-crousel-3.jpg' },
   { id: 5, type: 'image', src: '/images/home-crousel-4.jpg' },
-  
 ];
 
 export default function HeroCarousel() {
@@ -58,7 +59,7 @@ export default function HeroCarousel() {
             {slide.type === 'video' ? (
               <video
                 ref={videoRef}
-                src={slide.src}
+                src={getAssetUrl(slide.src)}
                 muted
                 playsInline
                 autoPlay
