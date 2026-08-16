@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import { getAssetUrl } from '@/utils/getAssetUrl';
 
 const reviews = [
   {
@@ -62,7 +63,7 @@ export default function TravelerReviews() {
               <div className="flex items-center gap-4 mt-auto">
                 <div className="relative w-11 h-11 rounded-full overflow-hidden shrink-0 border border-slate-100">
                   <Image
-                    src={rev.avatar}
+                    src={getAssetUrl(rev.avatar)}
                     alt={rev.name}
                     fill
                     className="object-cover"

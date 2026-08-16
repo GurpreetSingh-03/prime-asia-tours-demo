@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
+import { getAssetUrl } from '@/utils/getAssetUrl';
 
 const toursList = [
   {
@@ -12,27 +13,27 @@ const toursList = [
   {
     id: 2,
     title: 'Sheikh Zayed Grand Mosque',
-    image: '/images/Sheikh Zayed Grand Mosque.jpg',
+    image: '/images/sheikh-zayed-grand-mosque.jpg',
   },
   {
     id: 3,
     title: 'Deira Creekside',
-    image: '/images/deira crrekside.jpg',
+    image: '/images/deira-creekside.jpg',
   },
   {
     id: 4,
     title: 'Kite Beach',
-    image: '/images/Kite Beach.jpg',
+    image: '/images/kite-beach.jpg',
   },
   {
     id: 5,
     title: 'Dubai Desert',
-    image: '/images/Dubai Desert.jpeg',
+    image: '/images/dubai-desert.jpeg',
   },
   {
     id: 6,
     title: 'Al Mamzar Beach Park',
-    image: '/images/Al Mamzar Beach Park.jpg',
+    image: '/images/al-mamzar-beach-park.jpg',
   },
 ];
 
@@ -72,7 +73,7 @@ export default function TourPackages() {
               {/* Landscape Image Container */}
               <div className="relative aspect-[4/3] w-full rounded-[24px] overflow-hidden shadow-md shadow-slate-100 border border-slate-100">
                 <Image
-                  src={tour.image}
+                  src={getAssetUrl(tour.image)}
                   alt={tour.title}
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
