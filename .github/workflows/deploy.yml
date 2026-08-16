@@ -2,7 +2,7 @@ name: Deploy Next.js to HostArmada Staging
 
 on:
   push:
-    branches: [ main ] # Change to 'master' if your default branch is named master
+    branches: [ main ]
 
 jobs:
   build-and-deploy:
@@ -23,7 +23,7 @@ jobs:
         run: npm run build
 
       - name: Sync Files via FTP
-        uses: SamKirland/ftp-deploy-action@4.3.4
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
