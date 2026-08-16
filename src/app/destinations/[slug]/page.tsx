@@ -3,6 +3,14 @@ import { notFound } from 'next/navigation';
 import { destinationsData } from '@/data/destinations';
 import DestinationClient from '@/components/DestinationClient';
 
+export const dynamic = 'force-static';
+
+export async function generateStaticParams() {
+  return Object.keys(destinationsData).map((slug) => ({
+    slug,
+  }));
+}
+
 interface PageProps {
   params: Promise<{ slug: string }>;
 }
