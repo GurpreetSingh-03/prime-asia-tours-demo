@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 import EnquiryModal from './EnquiryModal';
+import { getAssetUrl } from '@/utils/getAssetUrl';
 
 const destinations = [
   {
@@ -130,7 +131,7 @@ export default function PopularDestinations() {
               >
                 {/* Image */}
                 <Image
-                  src={dest.image}
+                  src={getAssetUrl(dest.image)}
                   alt={dest.title}
                   fill
                   sizes="(max-width: 640px) 78vw, (max-width: 1024px) 48vw, 320px"

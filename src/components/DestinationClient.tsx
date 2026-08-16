@@ -7,6 +7,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import EnquiryModal from '@/components/EnquiryModal';
+import { getAssetUrl } from '@/utils/getAssetUrl';
 
 interface Destination {
   title: string;
@@ -31,8 +32,6 @@ interface DestinationClientProps {
   destination: Destination;
 }
 
-const getAssetUrl = (url: string) => (url.startsWith('/staging') || url.startsWith('http') ? url : `/staging${url}`);
-
 export default function DestinationClient({ destination }: DestinationClientProps) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [lightboxImage, setLightboxImage] = useState<string | null>(null);
@@ -47,7 +46,7 @@ export default function DestinationClient({ destination }: DestinationClientProp
         {/* Hero Section Banner */}
         <section className="relative w-full h-[45vh] min-h-[320px] md:h-[55vh] overflow-hidden">
           <Image
-            src={destination.image}
+            src={getAssetUrl(destination.image)}
             alt={destination.title}
             fill
             priority
@@ -213,7 +212,7 @@ export default function DestinationClient({ destination }: DestinationClientProp
                   className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-sm hover:shadow-md cursor-pointer hover:scale-[1.02] transition-all duration-300 group"
                 >
                   <Image
-                    src={image}
+                    src={getAssetUrl(image)}
                     alt={`${destination.title} Gallery Landscape ${index + 1}`}
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"

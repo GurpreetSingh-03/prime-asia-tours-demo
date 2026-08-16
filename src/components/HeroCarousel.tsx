@@ -3,8 +3,7 @@
 import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import { ArrowRight, Globe, Briefcase, Compass, MapPin } from 'lucide-react';
-
-const getAssetUrl = (url: string) => (url.startsWith('/staging') || url.startsWith('http') ? url : `/staging${url}`);
+import { getAssetUrl } from '@/utils/getAssetUrl';
 
 const slides = [
   { id: 1, type: 'video', src: '/images/video.mp4' },
@@ -68,7 +67,7 @@ export default function HeroCarousel() {
               />
             ) : (
               <Image
-                src={slide.src}
+                src={getAssetUrl(slide.src)}
                 alt={`Slide ${index + 1}`}
                 fill
                 priority={index === 0}

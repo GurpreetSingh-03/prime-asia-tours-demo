@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import { MapPin, Calendar, Users, ArrowRight } from 'lucide-react';
 import { destinationsData } from '@/data/destinations';
+import { getAssetUrl } from '@/utils/getAssetUrl';
 
 export default function HeroSection() {
   const [destination, setDestination] = useState('');
@@ -63,8 +64,8 @@ Here are my trip details:
             {/* Custom Leaf/Capsule Styled Image Container */}
             <div className="relative w-[340px] h-[400px] sm:w-[420px] sm:h-[480px] md:w-[480px] md:h-[540px] overflow-hidden rounded-[180px_180px_40px_180px] border-[12px] border-white shadow-2xl shadow-slate-200">
               <Image
-                src="/images/Dubai-main-image.jpg"
-                alt="Santorini, Greece"
+                src={getAssetUrl('/images/Dubai-main-image.jpg')}
+                alt="Dubai, UAE"
                 fill
                 priority
                 className="object-cover object-center select-none scale-105 hover:scale-100 transition-transform duration-700 ease-out"

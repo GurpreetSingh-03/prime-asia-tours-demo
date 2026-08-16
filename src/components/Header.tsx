@@ -4,12 +4,13 @@ import { useState, useEffect } from 'react';
 import { Menu, X, Phone, User, Search, MapPin } from 'lucide-react';
 import Image from 'next/image';
 import { destinationsData } from '@/data/destinations';
+import { getAssetUrl } from '@/utils/getAssetUrl';
 
 export function Logo() {
   return (
     <div className="flex items-center select-none cursor-pointer">
       <Image
-        src="/images/logo.png"
+        src={getAssetUrl('/images/logo.png')}
         alt="Prime Asia Tours"
         width={140}
         height={38}

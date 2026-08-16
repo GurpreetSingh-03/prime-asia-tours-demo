@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { Send } from 'lucide-react';
 import Image from 'next/image';
 import { Logo } from './Header';
+import { getAssetUrl } from '@/utils/getAssetUrl';
 
 export default function Footer() {
   const [email, setEmail] = useState('');
@@ -23,7 +24,7 @@ export default function Footer() {
       {/* Animated Background Image Behind Footer */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/footer-bg.png"
+          src={getAssetUrl('/images/footer-bg.png')}
           alt="Footer Landscape Background"
           fill
           className="object-cover opacity-90 scale-105 animate-slow-pan"
@@ -41,7 +42,7 @@ export default function Footer() {
           <div className="lg:col-span-4 flex flex-col items-start text-left">
             <div className="mb-4 select-none cursor-pointer">
               <Image
-                src="/images/logo.png"
+                src={getAssetUrl('/images/logo.png')}
                 alt="Prime Asia Tours"
                 width={175}
                 height={48}

@@ -4,6 +4,7 @@ import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import Image from 'next/image';
 import { Compass, ShieldCheck, Heart, Award } from 'lucide-react';
+import { getAssetUrl } from '@/utils/getAssetUrl';
 
 export const metadata: Metadata = {
   title: "About Us",
@@ -54,7 +55,7 @@ export default function AboutUsPage() {
             </div>
             <div className="md:col-span-6 relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md border border-slate-100/50">
               <Image
-                src="/images/home-crousel-1.jpg"
+                src={getAssetUrl('/images/home-crousel-1.jpg')}
                 alt="Dubai Tour Landscape"
                 fill
                 className="object-cover"
