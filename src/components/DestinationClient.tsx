@@ -19,9 +19,10 @@ interface Destination {
   description: string;
   highlights: { title: string; desc: string }[];
   visaInfo: {
-    requirements: string;
+    overview: string;
     processingTime: string;
-    requiredDocuments: string[];
+    essentials: string[];
+    contactNote: string;
   };
   gallery: string[];
 }
@@ -226,20 +227,20 @@ export default function DestinationClient({ destination }: DestinationClientProp
           </div>
         </section>
 
-        {/* Visa & Travel Details Block */}
+        {/* Travel Essentials & Visa Guidance Block */}
         <section className="bg-slate-50 border-t border-b border-slate-150/70 py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-left">
               <h3 className="text-2xl font-extrabold text-brand-dark mb-4 flex items-center gap-3.5">
                 <FileText className="w-6 h-6 text-brand-blue-600" />
-                <span>Visa &amp; Entry Information</span>
+                <span>Travel Essentials &amp; Entry Guidance</span>
               </h3>
               
-              <div className="bg-white rounded-2xl border border-slate-200/50 p-6 md:p-8 space-y-6">
+              <div className="bg-white rounded-2xl border border-slate-200/50 p-6 md:p-8 space-y-6 shadow-sm">
                 <div>
-                  <h4 className="text-sm font-bold text-brand-dark mb-2">Requirements Overview</h4>
+                  <h4 className="text-sm font-bold text-brand-dark mb-2">Overview &amp; Entry Guidance</h4>
                   <p className="text-xs md:text-sm text-slate-600 leading-relaxed font-medium">
-                    {destination.visaInfo.requirements}
+                    {destination.visaInfo.overview}
                   </p>
                 </div>
 
@@ -249,7 +250,7 @@ export default function DestinationClient({ destination }: DestinationClientProp
                   <div>
                     <h4 className="text-sm font-bold text-brand-dark mb-2 flex items-center gap-2">
                       <Clock className="w-4 h-4 text-brand-blue-600" />
-                      <span>Processing Time</span>
+                      <span>Assistance &amp; Timeline</span>
                     </h4>
                     <p className="text-xs md:text-sm text-slate-600 font-medium">
                       {destination.visaInfo.processingTime}
@@ -257,16 +258,38 @@ export default function DestinationClient({ destination }: DestinationClientProp
                   </div>
                   
                   <div>
-                    <h4 className="text-sm font-bold text-brand-dark mb-2">Required Documents</h4>
+                    <h4 className="text-sm font-bold text-brand-dark mb-2 flex items-center gap-2">
+                      <CheckCircle className="w-4 h-4 text-emerald-500" />
+                      <span>General Travel Essentials</span>
+                    </h4>
                     <ul className="space-y-1.5 list-disc pl-4">
-                      {destination.visaInfo.requiredDocuments.map((doc, index) => (
+                      {destination.visaInfo.essentials.map((item, index) => (
                         <li key={index} className="text-xs text-slate-600 font-medium">
-                          {doc}
+                          {item}
                         </li>
                       ))}
                     </ul>
                   </div>
                 </div>
+
+                {/* Contact Prompt Highlight Card */}
+                <div className="mt-6 p-5 rounded-xl bg-gradient-to-r from-brand-blue-50 to-amber-50/50 border border-brand-blue-100 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                  <div className="space-y-1">
+                    <h5 className="text-xs sm:text-sm font-extrabold text-brand-dark flex items-center gap-2">
+                      <span className="text-base">💡</span> Custom Visa &amp; Entry Details
+                    </h5>
+                    <p className="text-[11px] text-slate-600 font-medium max-w-lg leading-relaxed">
+                      {destination.visaInfo.contactNote}
+                    </p>
+                  </div>
+                  <button
+                    onClick={() => setIsModalOpen(true)}
+                    className="shrink-0 px-4 py-2.5 bg-brand-blue-600 hover:bg-brand-blue-700 text-white text-xs font-bold rounded-lg transition-all shadow-sm hover:scale-105 cursor-pointer"
+                  >
+                    Contact Travel Desk
+                  </button>
+                </div>
+
               </div>
             </div>
           </div>

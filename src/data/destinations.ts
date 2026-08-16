@@ -1,7 +1,8 @@
 export interface VisaDetails {
-  requirements: string;
+  overview: string;
   processingTime: string;
-  requiredDocuments: string[];
+  essentials: string[];
+  contactNote: string;
 }
 
 export interface Destination {
@@ -25,7 +26,7 @@ export const destinationsData: Record<string, Destination> = {
     slug: "switzerland",
     title: "Switzerland",
     subtitle: "Experience the Majestic Alps and Alpine Meadows",
-    image: "/images/destinations/switzerland/cover.jpg",
+    image: "/images/destinations/switzerland/banner.jpg",
     capital: "Bern",
     language: "German, French, Italian, Romansh",
     currency: "Swiss Franc (CHF)",
@@ -37,16 +38,16 @@ export const destinationsData: Record<string, Destination> = {
       { title: "Pristine Alpine Lakes", desc: "Visit Lake Geneva, Lake Lucerne, and Lake Zurich for scenic boat cruises." }
     ],
     visaInfo: {
-      requirements: "Nationals from non-Schengen countries generally require a Schengen Visa (Type C) for short stays up to 90 days. Exemptions apply for various nationalities.",
-      processingTime: "Typically 15 calendar days from the date of application submission.",
-      requiredDocuments: [
-        "Completed Schengen Visa application form",
-        "Valid passport (minimum 3 months validity beyond planned stay)",
-        "Two recent passport-sized photographs",
-        "Round-trip flight itineraries and proof of accommodation",
-        "Travel medical insurance covering at least EUR 30,000",
-        "Recent bank statements showing sufficient funds"
-      ]
+      overview: "Switzerland welcomes travelers with smooth entry procedures for global visitors. Entry guidelines vary by passport country, and Prime Asia Tours assists with application guidance for a seamless holiday.",
+      processingTime: "Quick assistance & streamlined application guidance available.",
+      essentials: [
+        "Passport with at least 6 months validity",
+        "European Type J/C power adapter",
+        "Comfortable footwear for alpine walks & town exploration",
+        "Multi-layer clothing for mountain weather changes",
+        "Credit or Debit card for cashless payments"
+      ],
+      contactNote: "Specific visa guidelines, expedited options, and custom documentation requirements vary based on your nationality. Contact our travel specialists directly for complete details tailored to your trip!"
     },
     keywords: ["alps", "matterhorn", "glacier express", "geneva", "lucerne", "zurich", "swiss", "bern", "mountains"],
     gallery: [
@@ -59,7 +60,7 @@ export const destinationsData: Record<string, Destination> = {
     slug: "paris",
     title: "Beauty of Paris",
     subtitle: "Immerse Yourself in Art, Fashion, and Gastronomy",
-    image: "/images/destinations/paris/cover.jpg",
+    image: "/images/destinations/paris/banner.jpg",
     capital: "Paris (France)",
     language: "French",
     currency: "Euro (EUR)",
@@ -71,16 +72,16 @@ export const destinationsData: Record<string, Destination> = {
       { title: "Charming Districts", desc: "Stroll through the artistic streets of Montmartre and the historic Marais." }
     ],
     visaInfo: {
-      requirements: "France is part of the Schengen Zone. Non-exempt passport holders must secure a French Schengen Visa. Visa requirements depend on the traveler's passport country.",
-      processingTime: "Usually processed within 10 to 15 working days, depending on seasonal volume.",
-      requiredDocuments: [
-        "Schengen Visa application form",
-        "Passport with at least two blank pages",
-        "Travel itinerary (flight and hotel bookings)",
-        "Schengen-compliant travel health insurance",
-        "Proof of financial subsistence (bank statements)",
-        "Employment letter or proof of business ownership"
-      ]
+      overview: "Planning your dream trip to Paris is easy! Entry procedures depend on your passport origin, and Prime Asia Tours assists you with document preparation and guided visa support.",
+      processingTime: "Fast-track processing & document verification provided.",
+      essentials: [
+        "Passport valid for at least 6 months",
+        "European Type C/E plug adapter",
+        "Light jacket or umbrella for pleasant Parisian weather",
+        "Euros or contactless card payment",
+        "Smart casual outfits for dining and museum visits"
+      ],
+      contactNote: "Entry rules and appointment availability differ depending on your passport country. Reach out to our team directly for customized visa advice and trip support!"
     },
     keywords: ["eiffel tower", "louvre", "seine", "montmartre", "marais", "france", "beauty of paris", "french", "notre-dame"],
     gallery: [
@@ -93,7 +94,7 @@ export const destinationsData: Record<string, Destination> = {
     slug: "united-states",
     title: "United States",
     subtitle: "Explore Vast Landscapes, National Parks, and Iconic Cities",
-    image: "/images/destinations/united-states/cover.jpg",
+    image: "/images/destinations/united-states/banner.jpg",
     capital: "Washington, D.C.",
     language: "English (De facto)",
     currency: "US Dollar (USD)",
@@ -105,15 +106,16 @@ export const destinationsData: Record<string, Destination> = {
       { title: "National Park System", desc: "Discover active geysers at Yellowstone or giant sequoias in Yosemite." }
     ],
     visaInfo: {
-      requirements: "Non-US citizens require a valid visa (B1/B2 tourist visa) unless qualifying for the Visa Waiver Program (VWP) via the Electronic System for Travel Authorization (ESTA).",
-      processingTime: "Varies significantly by consulate location (ESTA takes up to 72 hours; tourist visa interviews can take weeks to schedule).",
-      requiredDocuments: [
-        "Form DS-160 confirmation page (for non-waiver applicants)",
-        "Valid passport and visa application fee payment receipt",
-        "Proof of ties to home country (employment, property)",
-        "Travel itinerary details",
-        "Financial statements demonstrating trip funding"
-      ]
+      overview: "Visiting the USA for holiday is a popular choice for global travelers. Whether you need an ESTA waiver or a tourist visa, our travel team provides step-by-step guidance.",
+      processingTime: "Full guidance & application submission assistance.",
+      essentials: [
+        "Passport valid for at least 6 months beyond travel dates",
+        "US Type A/B 2-pin flat power adapter",
+        "Digital copies of flight and hotel details",
+        "Major credit or debit cards (widely used across the US)",
+        "Seasonal apparel tailored to your destination city"
+      ],
+      contactNote: "Visa appointment slots and ESTA eligibility parameters vary depending on your citizenship. Contact our travel desk to get full assistance for your US trip!"
     },
     keywords: ["new york", "manhattan", "grand canyon", "yellowstone", "yosemite", "usa", "america", "united states", "washington"],
     gallery: [
@@ -126,7 +128,7 @@ export const destinationsData: Record<string, Destination> = {
     slug: "wiesbaden",
     title: "Wiesbaden",
     subtitle: "Discover Historic Thermal Springs and the Rhine Valley",
-    image: "/images/destinations/wiesbaden/cover.jpg",
+    image: "/images/destinations/wiesbaden/banner.jpg",
     capital: "Wiesbaden (Capital of Hesse, Germany)",
     language: "German",
     currency: "Euro (EUR)",
@@ -138,16 +140,16 @@ export const destinationsData: Record<string, Destination> = {
       { title: "Rhine River Cruise gateway", desc: "Explore nearby vineyards, historic castles, and scenic riverbanks." }
     ],
     visaInfo: {
-      requirements: "Germany is a Schengen Area member state. Non-exempt international travelers must obtain a Schengen Visa. Requirements are subject to the applicant's nationality.",
-      processingTime: "Typically takes 10 to 15 business days following application submission.",
-      requiredDocuments: [
-        "Schengen visa application form",
-        "Valid passport",
-        "Travel health insurance coverage of at least €30,000",
-        "Flight ticket and accommodation bookings",
-        "Proof of financial solvency (3 months bank statements)",
-        "Proof of employment or study status"
-      ]
+      overview: "Wiesbaden is a charming historic spa destination in Germany. Entry procedures are simple, and Prime Asia Tours ensures your travel documents are fully aligned for a relaxing getaway.",
+      processingTime: "Guided application support & document review.",
+      essentials: [
+        "Passport with at least 6 months validity",
+        "European Type C/F plug adapter",
+        "Comfortable shoes for exploring thermal baths and historic streets",
+        "Euros for local cafes and shopping",
+        "Light outerwear for Rhine river tours"
+      ],
+      contactNote: "Specific entry details and customized travel guidelines vary by country of residence. Contact our specialists today to receive full details and assistance!"
     },
     keywords: ["rhine", "kurhaus", "opelbad", "neroberg", "hesse", "germany", "spa town", "hot springs", "castles"],
     gallery: [
@@ -160,7 +162,7 @@ export const destinationsData: Record<string, Destination> = {
     slug: "dubai",
     title: "Dubai",
     subtitle: "Where Modern Marvels Meet Arabian Desert Heritage",
-    image: "/images/destinations/dubai/cover.jpg",
+    image: "/images/destinations/dubai/banner.jpg",
     capital: "Dubai (United Arab Emirates)",
     language: "Arabic (Official), English widely spoken",
     currency: "UAE Dirham (AED)",
@@ -172,14 +174,16 @@ export const destinationsData: Record<string, Destination> = {
       { title: "Desert Safari Excursions", desc: "Experience dune bashing, camel rides, and traditional bedouin camp dining." }
     ],
     visaInfo: {
-      requirements: "Over 70 nationalities qualify for a free visa-on-arrival or visa-free entry. Other nationalities must secure a pre-arranged tourist visa sponsored by agencies.",
-      processingTime: "Pre-arranged tourist visas take approximately 3 to 5 working days.",
-      requiredDocuments: [
-        "Color copy of passport biodata page (valid for minimum 6 months)",
-        "Passport-sized photograph with white background",
-        "Confirmed return flight tickets",
-        "Proof of hotel booking or host accommodation"
-      ]
+      overview: "Dubai offers hassle-free entry for international travelers, with many nationalities receiving free visa-on-arrival or fast online tourist visas processed directly by Prime Asia Tours.",
+      processingTime: "Express 24-72 hour visa issuance available.",
+      essentials: [
+        "Passport valid for at least 6 months from arrival date",
+        "UK/UAE Type G 3-pin square power adapter",
+        "Lightweight summer clothing and sunglasses",
+        "UAE Dirhams (AED) or credit/debit cards",
+        "Sunscreen and swim gear for beach resorts & desert safaris"
+      ],
+      contactNote: "Visa-on-arrival eligibility and 30-day or 60-day tourist visa options depend on your passport. Contact our Dubai team for instant visa processing!"
     },
     keywords: [
       "burj khalifa", "palm jumeirah", "burj al arab", "dubai marina", "dubai mall", "fountain", 
@@ -196,7 +200,7 @@ export const destinationsData: Record<string, Destination> = {
     slug: "georgia",
     title: "Georgia",
     subtitle: "Journey Through High Caucasus Peaks and Ancient Towns",
-    image: "/images/destinations/georgia/cover.jpg",
+    image: "/images/destinations/georgia/banner.jpg",
     capital: "Tbilisi",
     language: "Georgian",
     currency: "Georgian Lari (GEL)",
@@ -208,15 +212,16 @@ export const destinationsData: Record<string, Destination> = {
       { title: "Signagi & Kakheti Wine Region", desc: "Discover ancient clay jar (Qvevri) wine-making traditions." }
     ],
     visaInfo: {
-      requirements: "Citizens of over 90 countries can enter Georgia visa-free for up to one full year. Valid residence permits or visas from Schengen countries, UAE, and GCC allow visa-free entry.",
-      processingTime: "For nationalities requiring e-Visas, processing is usually completed in 5 working days.",
-      requiredDocuments: [
-        "Valid passport with at least 6 months validity",
-        "Completed e-Visa application form (if applicable)",
-        "Proof of accommodation and return flights",
-        "Travel health insurance",
-        "Sufficient financial means verification"
-      ]
+      overview: "Georgia is famous for its warm hospitality and easy entry policies for travelers worldwide. Prime Asia Tours helps you prepare everything needed for an unforgettable Caucasus holiday.",
+      processingTime: "Quick assistance & entry verification.",
+      essentials: [
+        "Passport valid for at least 6 months",
+        "European Type C/F 2-pin power adapter",
+        "Warm layers for Caucasus mountain excursions",
+        "Georgian Lari (GEL) or international cards",
+        "Camera for historic mountain monasteries"
+      ],
+      contactNote: "Visa exemption rules (including valid GCC or Schengen visa exemptions) depend on your passport. Contact our team to check your specific entry status!"
     },
     keywords: ["tbilisi", "gergeti", "kazbek", "kakheti", "signagi", "caucasus", "monasteries", "old town"],
     gallery: [
@@ -229,7 +234,7 @@ export const destinationsData: Record<string, Destination> = {
     slug: "morocco",
     title: "Morocco",
     subtitle: "Discover Vibrant Medinas, Spices, and Sahara Dunes",
-    image: "/images/destinations/morocco/cover.jpg",
+    image: "/images/destinations/morocco/banner.jpg",
     capital: "Rabat",
     language: "Arabic, Berber (Official), French widely used",
     currency: "Moroccan Dirham (MAD)",
@@ -241,16 +246,16 @@ export const destinationsData: Record<string, Destination> = {
       { title: "Chefchaouen (The Blue City)", desc: "Wander through the striking blue-washed streets of the Rif mountains." }
     ],
     visaInfo: {
-      requirements: "Citizens of several countries (including US, EU, GCC, and others) can enter Morocco visa-free for up to 90 days. Other passport holders must apply for a tourist visa.",
-      processingTime: "Tourist visa processing takes approximately 10 to 15 working days.",
-      requiredDocuments: [
-        "Visa application form",
-        "Passport valid for at least 90 days past entry date",
-        "Photocopy of passport pages",
-        "Confirmed flight reservation",
-        "Hotel booking confirmation or certified invitation letter",
-        "Proof of professional income and bank statements"
-      ]
+      overview: "Experience the magic of Morocco with smooth travel planning. Prime Asia Tours guides you through easy entry guidelines for a stress-free North African vacation.",
+      processingTime: "Personalized travel advice & visa support.",
+      essentials: [
+        "Passport valid for at least 6 months",
+        "European Type C/E plug adapter",
+        "Breathable cotton clothing for desert & medina tours",
+        "Moroccan Dirham (MAD) for local market shopping",
+        "Hat, sunglasses, and scarf for desert excursions"
+      ],
+      contactNote: "Entry guidelines, e-Visa eligibility, and application parameters depend on your country of citizenship. Contact our specialists for full personalized guidance!"
     },
     keywords: ["marrakesh", "sahara", "chefchaouen", "fes", "atlas", "rabat", "medina", "spices", "desert"],
     gallery: [

@@ -94,7 +94,7 @@ export default function OfficeLocation() {
                 <div>
                   <h4 className="text-sm font-bold text-brand-dark mb-1">Working Hours</h4>
                   <p className="text-xs md:text-sm text-slate-600 font-semibold leading-relaxed">
-                    Monday – Saturday: 9:00 AM – 6:00 PM<br />
+                    Monday – Saturday: 9:00 AM – 9:00 PM<br />
                     Sunday: Closed
                   </p>
                 </div>
