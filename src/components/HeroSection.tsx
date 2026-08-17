@@ -26,7 +26,7 @@ Here are my trip details:
 📅 Check-out Date: ${checkOut || 'Not specified'}
 👥 Travelers: ${travelers || 'Not specified'}`;
 
-  const whatsappUrl = `https://wa.me/971558597360?text=${encodeURIComponent(message)}`;
+  const whatsappUrl = `https://wa.me/971527716690?text=${encodeURIComponent(message)}`;
 
   return (
     <section id="home" className="relative pt-24 pb-20 lg:pt-36 lg:pb-32 bg-gradient-to-b from-blue-50/40 via-white to-white overflow-hidden">

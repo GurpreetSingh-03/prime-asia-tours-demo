@@ -351,15 +351,15 @@ export default function AboutUsClient() {
             {/* Right Action Buttons */}
             <div className="flex flex-col sm:flex-row items-center gap-3 shrink-0 w-full md:w-auto">
               <a
-                href="tel:+971558597360"
+                href="tel:+971527716690"
                 className="w-full sm:w-auto px-5 py-3 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-xs sm:text-sm flex items-center justify-center gap-2 border border-white/20 transition-all cursor-pointer"
               >
                 <Phone className="w-4 h-4 text-brand-blue-400" />
-                <span>+971 55 859 7360</span>
+                <span>+971 52 771 6690</span>
               </a>
 
               <a
-                href={`https://wa.me/971558597360?text=${encodeURIComponent("Hello Prime Asia Tours! I would like to inquire about your holiday packages and travel services.")}`}
+                href={`https://wa.me/971527716690?text=${encodeURIComponent("Hello Prime Asia Tours! I would like to inquire about your holiday packages and travel services.")}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto px-5 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-lg shadow-emerald-600/30 transition-all cursor-pointer"

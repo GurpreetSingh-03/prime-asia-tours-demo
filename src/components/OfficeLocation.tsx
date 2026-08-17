@@ -61,8 +61,8 @@ export default function OfficeLocation() {
                 <div>
                   <h4 className="text-sm font-bold text-brand-dark mb-1">Call/WhatsApp</h4>
                   <p className="text-xs md:text-sm text-slate-600 font-semibold">
-                    <a href="tel:+971558597360" className="hover:text-brand-blue-600 transition-colors">
-                      +971 55 859 7360
+                    <a href="tel:+971527716690" className="hover:text-brand-blue-600 transition-colors">
+                      +971 52 771 6690
                     </a>
                   </p>
                 </div>

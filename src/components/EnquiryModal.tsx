@@ -51,7 +51,7 @@ Here are my details:
 📅 Proposed Travel Date: ${formData.travelDate}
 💬 Message/Requests: ${formData.message || 'None'}`;
 
-    const whatsappUrl = `https://wa.me/971558597360?text=${encodeURIComponent(messageText)}`;
+    const whatsappUrl = `https://wa.me/971527716690?text=${encodeURIComponent(messageText)}`;
     
     // Open WhatsApp pre-filled chat in a new tab
     window.open(whatsappUrl, '_blank');

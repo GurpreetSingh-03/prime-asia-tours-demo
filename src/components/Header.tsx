@@ -92,12 +92,12 @@ export default function Header() {
             {/* Desktop Right Actions */}
             <div className="hidden md:flex items-center gap-4">
               <a
-                href="tel:+971558597360"
+                href="tel:+971527716690"
                 className={`flex items-center gap-1.5 transition-colors text-xs font-semibold ${isScrolled ? 'text-slate-700 hover:text-brand-blue-600' : 'text-white/85 hover:text-white'
                   }`}
               >
                 <Phone className={`w-3.5 h-3.5 ${isScrolled ? 'text-brand-blue-600' : 'text-white'}`} />
-                <span>+971 55 859 7360</span>
+                <span>+971 52 771 6690</span>
               </a>
               <button
                 onClick={() => {
@@ -172,13 +172,13 @@ export default function Header() {
           {/* Mobile Actions */}
           <div className="flex flex-col gap-6 mt-4">
             <a
-              href="tel:+971558597360"
+              href="tel:+971527716690"
               className="flex items-center gap-3 text-slate-800 text-base font-semibold"
             >
               <div className="flex items-center justify-center w-10 h-10 rounded-full bg-brand-blue-50 text-brand-blue-600">
                 <Phone className="w-5 h-5" />
               </div>
-              <span>+971 55 859 7360</span>
+              <span>+971 52 771 6690</span>
             </a>
             <button
               className="w-full py-3 border border-slate-200 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-slate-50 transition-colors"

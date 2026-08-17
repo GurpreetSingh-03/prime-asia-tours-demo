@@ -2,7 +2,7 @@
 
 export default function WhatsAppButton() {
   const defaultMessage = "Hello Prime Asia Tours! I would like to inquire about your holiday packages, visa services, and travel offers.";
-  const whatsappUrl = `https://wa.me/971558597360?text=${encodeURIComponent(defaultMessage)}`;
+  const whatsappUrl = `https://wa.me/971527716690?text=${encodeURIComponent(defaultMessage)}`;
 
   return (
     <div className="fixed bottom-6 right-6 z-50 flex items-center gap-3">

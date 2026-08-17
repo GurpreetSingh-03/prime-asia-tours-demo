@@ -74,7 +74,7 @@ export default function RootLayout({
     "logo": "https://primeasiatours.com/images/logo.png",
     "image": "https://primeasiatours.com/images/home-crousel-1.jpg",
     "description": "Prime Asia Tourism LLC is a leading travel agency in Dubai specializing in customized holiday planning, tourist visa processing, hotel reservations, and excursions.",
-    "telephone": "+971558597360",
+    "telephone": "+971527716690",
     "email": ["info@primeasiatours.com", "booking@primeasiatours.com"],
     "address": {
       "@type": "PostalAddress",

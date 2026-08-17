@@ -328,8 +328,8 @@ export default function ContactUsClient() {
                     </div>
                     <div>
                       <h4 className="font-black text-[#1a2b49] text-[10px] sm:text-xs uppercase tracking-wider">Call / WhatsApp</h4>
-                      <a href="tel:+971558597360" className="text-sm sm:text-base font-bold text-slate-700 hover:text-brand-blue-600 transition-colors">
-                        +971 55 859 7360
+                      <a href="tel:+971527716690" className="text-sm sm:text-base font-bold text-slate-700 hover:text-brand-blue-600 transition-colors">
+                        +971 52 771 6690
                       </a>
                     </div>
                   </div>
