@@ -44,9 +44,9 @@ export default function Footer() {
               <Image
                 src={getAssetUrl('/images/logo.png')}
                 alt="Prime Asia Tours"
-                width={175}
-                height={48}
-                className="h-8 md:h-9 w-auto object-contain"
+                width={220}
+                height={60}
+                className="h-10 md:h-12 w-auto object-contain"
                 priority
               />
             </div>

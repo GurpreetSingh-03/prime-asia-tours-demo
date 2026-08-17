@@ -12,9 +12,9 @@ export function Logo() {
       <Image
         src={getAssetUrl('/images/logo.png')}
         alt="Prime Asia Tours"
-        width={140}
-        height={38}
-        className="h-6 md:h-7 w-auto object-contain"
+        width={200}
+        height={54}
+        className="h-8 md:h-10 w-auto object-contain"
         priority
       />
     </div>

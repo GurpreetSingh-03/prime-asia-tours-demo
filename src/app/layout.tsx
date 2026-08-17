@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
+import { getAssetUrl } from "@/utils/getAssetUrl";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   weight: ["300", "400", "500", "600", "700", "800"],
@@ -26,6 +27,13 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: "/",
+  },
+  icons: {
+    icon: [
+      { url: "/images/favicon.png", type: "image/png" }
+    ],
+    shortcut: ["/images/favicon.png"],
+    apple: ["/images/favicon.png"],
   },
   openGraph: {
     title: "Prime Asia Tours | Premium Tours, Holidays & Visa Services in Dubai",
@@ -109,6 +117,14 @@ export default function RootLayout({
       className={`${plusJakartaSans.variable} h-full antialiased`}
     >
       <head>
+        <link rel="icon" type="image/png" href={getAssetUrl('/images/favicon.png')} />
+        <link rel="shortcut icon" href={getAssetUrl('/images/favicon.png')} />
+        <link rel="apple-touch-icon" href={getAssetUrl('/images/favicon.png')} />
+        <style dangerouslySetInnerHTML={{ __html: `
+          @media (min-width: 1536px) { html { zoom: 1.1; } }
+          @media (min-width: 1920px) { html { zoom: 1.2; } }
+          @media (min-width: 2560px) { html { zoom: 1.35; } }
+        `}} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
